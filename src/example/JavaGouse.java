@@ -1,5 +1,6 @@
 package example;
 
+
 public class JavaGouse {
 
 	public static void main(String[] args) {
@@ -17,6 +18,8 @@ public class JavaGouse {
 			sum += Math.pow(count, 4);
 		}
 		System.out.println(sum);
+		
+//		System.out.println(IntStream.rangeClosed(1, 40).map(i -> i * i * i * i).sum());
 	}
 
 }
