@@ -1,10 +1,8 @@
 package example;
 
-public class CountEvens {
-
-	public static void main(String[] args) {
-		int nums[] = {2,1,7,8,2,3,4};
-		
+public class CountNums {
+	
+	void countEvens(int nums[]) {
 		int count = 0;
 		for (int num: nums) {
 			if (num % 2 == 0) {
