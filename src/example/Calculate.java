@@ -3,7 +3,7 @@ package example;
 public class Calculate {
 	
 	void calculatePoints(int amount, boolean isBirthday) {
-		double point = 0;
+		double point;
 		
 		if (amount <= 999) {
 			point = amount * 0.03;
@@ -14,7 +14,7 @@ public class Calculate {
 		if (isBirthday) {
 			point *= 5;
 		}
-		System.out.println("ポイントは" + point + "点です");
+		System.out.println("ポイントは" + (int) point + "点です");
 	}
 
 }
