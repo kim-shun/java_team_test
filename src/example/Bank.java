@@ -1,7 +1,7 @@
 package example;
 
 public class Bank {
-	void Withdrraw(int balance, int amount) {
+	void Withdraw(int balance, int amount) {
 		int fee = 110;
 		if (balance >= (amount + fee)) {
 			balance -= (amount + fee);
