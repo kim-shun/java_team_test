@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class UseWithdraw {
 
+	private static Scanner scan;
+
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		int balance = 100000;
 		
 		System.out.println("いくら引き落としますか?（手数料110円かかります）");
