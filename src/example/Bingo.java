@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Bingo {
 
 	public static void main(String[] args) {
-		System.out.println("  B |  I |  N |  G |  O");
+		
 		ArrayList<Integer> list15 = new ArrayList<Integer>();
 		ArrayList<Integer> list30 = new ArrayList<Integer>();
 		ArrayList<Integer> list45 = new ArrayList<Integer>();
@@ -39,6 +39,8 @@ public class Bingo {
 		Collections.shuffle(list60);
 		Collections.shuffle(list75);
 		
+		System.out.println("  B |  I |  N |  G |  O");
+		
 		for (int count = 0; count <= 4; count++) {
 			System.out.printf("%3d", list15.get(count));
 			System.out.print(" |");
@@ -57,8 +59,6 @@ public class Bingo {
 			System.out.printf("%3d", list75.get(count));
 			System.out.println("\n");
 		}
-		
-		
 
 	}
 
