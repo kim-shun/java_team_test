@@ -22,22 +22,18 @@ public class Bingo {
 		System.out.println("  B |  I |  N |  G |  O");
 		
 		for (int count = 0; count <= 4; count++) {
-		System.out.printf("%3d", lists.get(0).get(count));
-		System.out.print(" |");
-		System.out.printf("%3d", lists.get(1).get(count));
-		System.out.print(" |");
-		
-		if (count == 2) {
-			System.out.print("    |");
-		} else {
-			System.out.printf("%3d", lists.get(2).get(count));
-			System.out.print(" |");
-		}
-		
-		System.out.printf("%3d", lists.get(3).get(count));
-		System.out.print(" |");
-		System.out.printf("%3d", lists.get(4).get(count));
-		System.out.println("\n");
+			for (int i = 0; i <= 4; i++) {
+				if (count == 2 && i == 2) {
+					System.out.print("    |");
+				} else {
+					System.out.printf("%3d", lists.get(i).get(count));
+					if (i != 4) {
+						System.out.print(" |");
+					}
+				}
+			}
+			System.out.println("\n");
+
 	    }
 
 	}
