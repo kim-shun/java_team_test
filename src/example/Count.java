@@ -2,6 +2,12 @@ package example;
 
 public class Count {
 	
+//	long countHi(String str) {
+//	    try (java.util.Scanner scanner = new java.util.Scanner(str)) {
+//	        return scanner.findAll("hi").count();
+//	    }
+//	}
+	
 	void countHi(String str) {
 		int index = 0;
 		int count = 0;
