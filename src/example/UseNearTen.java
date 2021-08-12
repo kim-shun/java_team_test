@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class UseNearTen {
 
+	private static Scanner scan;
+
 	public static void main(String[] args) {
 		System.out.println("3桁の正の整数を入力してください");
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		int input = scan.nextInt();
 		
 		NearTen num1 = new NearTen();
