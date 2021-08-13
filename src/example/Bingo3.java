@@ -9,7 +9,7 @@ public class Bingo3 {
 		
 		ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
 		int num = 1;
-		for (int i = 1; i <= 5; i++) {
+		for (int i = 0; i <= 4; i++) {
 			ArrayList<Integer> list = new ArrayList<>();
 			for (int j = num; j <= num + 14; j++) {
 				list.add(j);
