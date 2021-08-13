@@ -23,14 +23,14 @@ public class Bingo3 {
 		
 		for (int i = 0; i <= 4; i++) {
 			for (int j = 0; j <= 4; j++) {
-				if (i == 2 && j == 2) {
-					System.out.print("    |");
-				} else {
-					System.out.printf("%3d", lists.get(j).get(i));
-					if (j != 4) {
-						System.out.print(" |");
-					}
-				}
+                if (i == 2 && j == 2) {
+                    System.out.print("   ");
+                } else {
+                    System.out.printf("%3d", lists.get(j).get(i));
+                }
+                if (j != 4) {
+                    System.out.print(" |");
+                }
 			}
 			System.out.println();
 
