@@ -12,8 +12,13 @@ public class DateSample {
 		System.out.println(today);
 		
 		Calendar cl = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("変更前:yyyy/MM/dd");
 		System.out.println(sdf.format(cl.getTime()));
+		
+		sdf.applyPattern("変更後:yyy年MM月dd日(E)");
+		System.out.println(sdf.format(cl.getTime()));
+		
+		System.out.println(sdf.format(date));
 
 	}
 
