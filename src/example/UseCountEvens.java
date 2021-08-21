@@ -1,7 +1,6 @@
 package example;
 
 public class UseCountEvens {
-
 	public static void main(String[] args) {
 		CountNums n = new CountNums();
 		int[] nums1 = {2, 1, 7, 8, 2, 3, 4};
@@ -11,7 +10,6 @@ public class UseCountEvens {
 		n.countEvens(nums1);
 		n.countEvens(nums2);
 		n.countEvens(nums3);
-
 	}
 
 }
