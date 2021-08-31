@@ -13,9 +13,9 @@ public class XyzThere {
 	}
 	
 	public void xyzThere(String str) {
-		if (str.indexOf(".xyz", 0) != -1) {
+		if (str.indexOf(".xyz") != -1) {
 			System.out.println("False");
-		} else if (str.indexOf("xyz", 0) == -1) {
+		} else if (str.indexOf("xyz") != -1) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");
