@@ -9,7 +9,7 @@ public class Decimal {
 	public static Scanner scan;
 
 	public static void main(String[] args) {
-		System.out.println("16進数を入力してください");
+		System.out.println("16進数を入力してください(マイナス値は扱えません)");
 		scan = new Scanner(System.in);
 		String hexa = scan.next();
 		ChangeDecimal(hexa);
@@ -17,27 +17,16 @@ public class Decimal {
 	
 	static void ChangeDecimal(String hexa) {
 		Map<String,Integer> hexaMap = new HashMap<>();
-		hexaMap.put("0", 0);
-		hexaMap.put("1", 1);
-		hexaMap.put("2", 2);
-		hexaMap.put("3", 3);
-		hexaMap.put("4", 4);
-		hexaMap.put("5", 5);
-		hexaMap.put("6", 6);
-		hexaMap.put("7", 7);
-		hexaMap.put("8", 8);
-		hexaMap.put("9", 9);
-		hexaMap.put("A", 10);
-		hexaMap.put("B", 11);
-		hexaMap.put("C", 12);
-		hexaMap.put("D", 13);
-		hexaMap.put("E", 14);
-		hexaMap.put("F", 15);
+		String[] hexa_all = {"0","1","2","3","4","5",
+				"6","7","8","9","A","B","C","D","E","F"};
+		for (int i = 0; i < 16; i++) {
+			hexaMap.put(hexa_all[i], i);
+		}
 		
 		int n = hexa.length();
 		int sum = 0;
-		for (int i = 0; i < hexa.length(); i++) {
-			double num = hexaMap.get(hexa.substring(i,i + 1).toUpperCase()) * (Math.pow(16, n-1));
+		for (int j = 0; j < hexa.length(); j++) {
+			double num = hexaMap.get(hexa.substring(j,j + 1).toUpperCase()) * (Math.pow(16, n-1));
 			sum += num;
 			n -= 1;
 		}
