@@ -5,10 +5,12 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Decimal {
+	
+	public static Scanner scan;
 
 	public static void main(String[] args) {
 		System.out.println("16進数を入力してください");
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		String hexa = scan.next();
 		ChangeDecimal(hexa);
 	}
@@ -32,11 +34,10 @@ public class Decimal {
 		hexaMap.put("E", 14);
 		hexaMap.put("F", 15);
 		
-		
 		int n = hexa.length();
 		int sum = 0;
-		for (int i = 0; i < n; i++) {
-			double num = hexaMap.get(hexa.substring(i,i + 1)) * (Math.pow(16, n-1));
+		for (int i = 0; i < hexa.length(); i++) {
+			double num = hexaMap.get(hexa.substring(i,i + 1).toUpperCase()) * (Math.pow(16, n-1));
 			sum += num;
 			n -= 1;
 		}
