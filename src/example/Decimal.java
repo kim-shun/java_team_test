@@ -13,6 +13,10 @@ public class Decimal {
 		scan = new Scanner(System.in);
 		String hexa = scan.next();
 		ChangeDecimal(hexa);
+
+//		java標準機能
+		int dec = Integer.parseInt(hexa, 16);
+		System.out.println(dec);
 	}
 	
 	static void ChangeDecimal(String hexa) {
