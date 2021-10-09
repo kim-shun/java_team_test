@@ -23,12 +23,10 @@ public class Decimal {
 			hexaMap.put(hexa_all[i], i);
 		}
 		
-		int n = hexa.length();
 		int sum = 0;
 		for (int j = 0; j < hexa.length(); j++) {
-			double num = hexaMap.get(hexa.substring(j,j + 1).toUpperCase()) * (Math.pow(16, n-1));
-			sum += num;
-			n -= 1;
+			int num = hexaMap.get(hexa.substring(j,j + 1).toUpperCase());
+			sum = 16 * sum + num;
 		}
 		System.out.println(sum);
 
