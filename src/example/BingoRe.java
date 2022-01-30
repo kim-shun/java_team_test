@@ -7,19 +7,19 @@ public class BingoRe {
 
 	public static void main(String[] args) {
 		List<Integer> B = new ArrayList<Integer>();
+		List<Integer> I = new ArrayList<Integer>();
+		List<Integer> N = new ArrayList<Integer>();
+		List<Integer> G = new ArrayList<Integer>();
+		List<Integer> O = new ArrayList<Integer>();
 		
-		int[] I = new int[15];
-		int[] N = new int[15];
-		int[] G = new int[15];
-		int[] O = new int[15];
 		
 		for (int i =0; i < 15; i++) {
 			B.add(i + 1);
-			I[i] = i + 16;
-			N[i] = i + 31;
-			G[i] = i + 46;
-			O[i] = i + 61;
-			System.out.println(B.get(i));
+			I.add(i + 16);
+			N.add(i + 31);
+			G.add(i + 46);
+			O.add(i + 61);
+			
 		}
 		
 	}
