@@ -1,6 +1,7 @@
 package example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BingoRe {
@@ -21,6 +22,12 @@ public class BingoRe {
 			O.add(i + 61);
 			
 		}
+		
+		Collections.shuffle(B);
+		Collections.shuffle(I);
+		Collections.shuffle(N);
+		Collections.shuffle(G);
+		Collections.shuffle(O);
 		
 	}
 
