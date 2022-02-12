@@ -32,11 +32,11 @@ public class BingoRe {
 		System.out.println("  B |  I |  N |  G |  O");
 		
 		for (int j= 0; j < 5; j++) {
-			System.out.printf("%d%s",B.get(j),"|");
-			System.out.printf("%d%s",I.get(j),"|");
-			System.out.printf("%d%s",N.get(j),"|");
-			System.out.printf("%d%s",G.get(j),"|");
-			System.out.printf("%d",O.get(j));
+			System.out.printf("%4d%s",B.get(j),"|");
+			System.out.printf("%4d%s",I.get(j),"|");
+			System.out.printf("%4d%s",N.get(j),"|");
+			System.out.printf("%4d%s",G.get(j),"|");
+			System.out.printf("%4d",O.get(j));
 			System.out.println();
 		}
 		
