@@ -29,6 +29,17 @@ public class BingoRe {
 		Collections.shuffle(G);
 		Collections.shuffle(O);
 		
+		System.out.println("  B |  I |  N |  G |  O");
+		
+		for (int j= 0; j < 5; j++) {
+			System.out.print(B.get(j));
+			System.out.print(I.get(j));
+			System.out.print(N.get(j));
+			System.out.print(G.get(j));
+			System.out.print(O.get(j));
+			System.out.println();
+		}
+		
 	}
 
 }
