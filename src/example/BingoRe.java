@@ -34,7 +34,11 @@ public class BingoRe {
 		for (int j= 0; j < 5; j++) {
 			System.out.printf("%3d%s",B.get(j)," |");
 			System.out.printf("%3d%s",I.get(j)," |");
-			System.out.printf("%3d%s",N.get(j)," |");
+			if (j == 2) {
+				System.out.printf("%5s","|");
+			} else {
+				System.out.printf("%3d%s",N.get(j)," |");
+			}
 			System.out.printf("%3d%s",G.get(j)," |");
 			System.out.printf("%3d",O.get(j));
 			System.out.println();
