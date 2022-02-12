@@ -2,48 +2,38 @@ package example;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class BingoRe {
 
 	public static void main(String[] args) {
-		List<Integer> B = new ArrayList<Integer>();
-		List<Integer> I = new ArrayList<Integer>();
-		List<Integer> N = new ArrayList<Integer>();
-		List<Integer> G = new ArrayList<Integer>();
-		List<Integer> O = new ArrayList<Integer>();
-		
-		
-		for (int i =0; i < 15; i++) {
-			B.add(i + 1);
-			I.add(i + 16);
-			N.add(i + 31);
-			G.add(i + 46);
-			O.add(i + 61);
-			
+		ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
+		int num = 1;
+		for (int i =0; i < 5; i++) {
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			for (int j = num; j < num+15; j++) {
+				list.add(j);
+			}
+			Collections.shuffle(list);
+			lists.add(list);
+			num += 15;
 		}
 		
-		Collections.shuffle(B);
-		Collections.shuffle(I);
-		Collections.shuffle(N);
-		Collections.shuffle(G);
-		Collections.shuffle(O);
+        System.out.println("  B |  I |  N |  G |  O");
 		
-		System.out.println("  B |  I |  N |  G |  O");
-		
-		for (int j= 0; j < 5; j++) {
-			System.out.printf("%3d%s",B.get(j)," |");
-			System.out.printf("%3d%s",I.get(j)," |");
-			if (j == 2) {
+		for (int k= 0; k < 5; k++) {
+			System.out.printf("%3d%s",lists.get(0).get(k)," |");
+			System.out.printf("%3d%s",lists.get(1).get(k)," |");
+			if (k == 2) {
 				System.out.printf("%5s","|");
 			} else {
-				System.out.printf("%3d%s",N.get(j)," |");
+				System.out.printf("%3d%s",lists.get(2).get(k)," |");
 			}
-			System.out.printf("%3d%s",G.get(j)," |");
-			System.out.printf("%3d",O.get(j));
+			System.out.printf("%3d%s",lists.get(3).get(k)," |");
+			System.out.printf("%3d",lists.get(4).get(k));
 			System.out.println();
 		}
 		
+	
 	}
 
 }
