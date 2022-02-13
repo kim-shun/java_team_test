@@ -31,16 +31,25 @@ public class CreatePhonebook {
 				{"ラ,リ,ル,レ,ロ"},
 				{"ワ,ヲ,ン"}};
 		
-		
 		for (int i = 0; i < 10; i++) {
-			if (Arrays.toString(strs[i]).contains(names[0].substring(0,1))) {
-                ArrayList<String> namelist = new ArrayList<String>();
-				namelist.add(initial[i]);
-				namelist.add("[" + names[0] + "]");
-				namelists.add(namelist);
-				System.out.println(names[0].substring(0,1) + "は" + initial[i] + "行です");
-				
+			for (int j = 0; j < names.length; j++) {
+				if (Arrays.toString(strs[i]).contains(names[j].substring(0,1))) {
+	                ArrayList<String> namelist = new ArrayList<String>();
+					namelist.add(initial[i]);
+					namelist.add("[" + names[j] + "]");
+					namelists.add(namelist);
+//					System.out.println(names[j].substring(0,1) + "は" + initial[i] + "行です");
+					
+				}
 			}
+//			if (Arrays.toString(strs[i]).contains(names[0].substring(0,1))) {
+//                ArrayList<String> namelist = new ArrayList<String>();
+//				namelist.add(initial[i]);
+//				namelist.add("[" + names[0] + "]");
+//				namelists.add(namelist);
+//				System.out.println(names[0].substring(0,1) + "は" + initial[i] + "行です");
+//				
+//			}
 		}
 		
 		System.out.println(namelists);
