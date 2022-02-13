@@ -1,5 +1,6 @@
 package example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CreatePhonebook {
@@ -16,6 +17,8 @@ public class CreatePhonebook {
 	}
 	
 	static void PhoneBook(String[] names) {
+		ArrayList<ArrayList<String>> namelists = new ArrayList<ArrayList<String>>();
+		
 		String[] initial = {"ア","カ","サ","タ","ナ","ハ","マ","ヤ","ラ","ワ"};
 		String[][] strs = {{"ア,イ,ウ,エ,オ"},
 				{"カ,キ,ク,ケ,コ,ガ,ギ,グ,ゲ,ゴ"},
@@ -28,12 +31,19 @@ public class CreatePhonebook {
 				{"ラ,リ,ル,レ,ロ"},
 				{"ワ,ヲ,ン"}};
 		
+		
 		for (int i = 0; i < 10; i++) {
 			if (Arrays.toString(strs[i]).contains(names[0].substring(0,1))) {
+                ArrayList<String> namelist = new ArrayList<String>();
+				namelist.add(initial[i]);
+				namelist.add("[" + names[0] + "]");
+				namelists.add(namelist);
 				System.out.println(names[0].substring(0,1) + "は" + initial[i] + "行です");
 				
 			}
 		}
+		
+		System.out.println(namelists);
 //		
 //		String[] a = {"ア,イ,ウ,エ,オ"};
 //		String[] ka = {"カ,キ,ク,ケ,コ,ガ,ギ,グ,ゲ,ゴ"};
