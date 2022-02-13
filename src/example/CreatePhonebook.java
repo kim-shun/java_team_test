@@ -1,5 +1,7 @@
 package example;
 
+import java.util.Arrays;
+
 public class CreatePhonebook {
 
 	public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class CreatePhonebook {
 	
 	static void PhoneBook(String[] names) {
 		
+		System.out.println(Arrays.toString(names));
 	}
 	
 	
