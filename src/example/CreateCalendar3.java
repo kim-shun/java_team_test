@@ -17,7 +17,6 @@ public class CreateCalendar3 {
 		for (int i = 1; i <= lastDay; i++) {
 			dates.add(i);
 		}
-		
 		int thisYear = cl.get(Calendar.YEAR);
 		int thisMonth = cl.get(Calendar.MONTH);
 		cl.set(thisYear,thisMonth,1);
