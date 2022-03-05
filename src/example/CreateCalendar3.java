@@ -14,7 +14,7 @@ public class CreateCalendar3 {
 		
 		//確認用
 		System.out.println("\n");
-		int otherYear = 2022; //西暦を入力
+		int otherYear = 2013; //西暦を入力
 		int otherMonth = 4; //月を入力
 		outputCalendar(otherYear,otherMonth - 1);
 		
@@ -35,8 +35,8 @@ public class CreateCalendar3 {
 		int firstDayWeek = cl.get(Calendar.DAY_OF_WEEK) - 1; 
 		int lastDay = cl.getActualMaximum(Calendar.DAY_OF_MONTH); //月の最終日
 
-		System.out.print(monthName[month]);
-		System.out.println(year); 
+		System.out.print("     " + monthName[month] + " " +  year);
+		System.out.println(); 
 
 		//カレンダーの曜日を出力
 		for (int i = 0; i < week.length; i++) {
