@@ -5,23 +5,31 @@ import java.util.ArrayList;
 public class PhoneBookTest {
 
 	public static void main(String[] args) {
-		StringBuilder sb = new StringBuilder();
-		sb.append("ABC");
-		sb.append("DEF");
-		System.out.println(sb.toString());  // ABCDEF
-
-		sb.insert(2, "XYZ");
-		System.out.println(sb.toString());  // ABXYZCDEF
-		
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("ABC");
+//		sb.append("DEF");
+//		System.out.println(sb.toString());  // ABCDEF
+//
+//		sb.insert(2, "XYZ");
+//		System.out.println(sb.toString());  // ABXYZCDEF
+//		
+//		ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
+//		for (int i =0; i < 3; i++) {
+//			ArrayList<String> list = new ArrayList<String>();
+//			for (int j = 0; j < 3; j++) {
+//				list.add("あ");
+//				list.add(1,"い");
+//			}
+//			lists.add(list);
+//		}
+//		System.out.println(lists);
 		ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
-		for (int i =0; i < 3; i++) {
-			ArrayList<String> list = new ArrayList<String>();
-			for (int j = 0; j < 3; j++) {
-				list.add("あ");
-				list.add(1,"い");
-			}
-			lists.add(list);
+		ArrayList<String> list = new ArrayList<String>();
+		for (int i=0; i<4; i++) {
+			list.add("ア");
+			list.add("[イトウ]");
 		}
+		lists.add(list);
 		System.out.println(lists);
 		
 		//実行結果 [["ア", ["イトウ"]], ["カ", ["カネダ", "キシモト"]], ["ハ", ["ハマダ", "ババ"]], ["ワ", ["ワダ"]]]
